@@ -11,7 +11,7 @@ RUN rustup install nightly-2019-05-14 && \
 RUN rustc --version && \
     rustup --version && \
     cargo --version
-
+RUN apt update && apt install git curl build-essential
 RUN cargo clean && cargo build --release
 
 
