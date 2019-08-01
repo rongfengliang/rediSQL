@@ -104,13 +104,13 @@ The free version requires connection to our servers, make sure to set up your fi
 Moreover, also a Docker image is provide. Is sufficient to run the image `siscia/redisql` to start the Redis server with RediSQL loaded.
 
 ```
-$ docker run -it --net host dalognrong/redisql
+$ docker run -it --net host dalongrong/redisql
 ```
 
 The `dalognrong/redisql` image provides also the `redis-cli` client:
 
 ```
-$ docker run -it --net host dalognrong/redisql redis-cli
+$ docker run -it --net host dalongrong/redisql redis-cli
 ```
 
 ## Tutorials and walkthrought
