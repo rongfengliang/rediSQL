@@ -1,3 +1,5 @@
+> delete telemetrics code for better test 
+
 # RediSQL: Fast, in memory, SQL. With Batteries included.
 
 [![Gitter](https://img.shields.io/gitter/room/redbeardlab/redisql.svg?color=%2346BC99&style=for-the-badge)](https://gitter.im/rediSQL/community)
@@ -102,13 +104,13 @@ The free version requires connection to our servers, make sure to set up your fi
 Moreover, also a Docker image is provide. Is sufficient to run the image `siscia/redisql` to start the Redis server with RediSQL loaded.
 
 ```
-$ docker run -it --net host siscia/redisql
+$ docker run -it --net host dalognrong/redisql
 ```
 
-The `siscia/redisql` image provides also the `redis-cli` client:
+The `dalognrong/redisql` image provides also the `redis-cli` client:
 
 ```
-$ docker run -it --net host siscia/redisql redis-cli
+$ docker run -it --net host dalognrong/redisql redis-cli
 ```
 
 ## Tutorials and walkthrought
