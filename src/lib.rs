@@ -30,8 +30,8 @@ use commands::{
     QueryStatementInto, RediSQLVersion, UpdateStatement,
 };
 
-#[cfg(not(feature = "pro"))]
-extern crate telemetrics;
+// #[cfg(not(feature = "pro"))]
+// extern crate telemetrics;
 
 unsafe extern "C" fn rdb_save(
     rdb: *mut r::rm::ffi::RedisModuleIO,
