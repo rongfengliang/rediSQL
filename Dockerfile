@@ -1,8 +1,25 @@
+FROM rustlang/rust:nightly AS build
+
+WORKDIR /app
+
+COPY . /app
+
+RUN rustup --version
+RUN rustup install nightly-2019-05-14 && \
+    rustup default nightly-2019-05-14
+
+RUN rustc --version && \
+    rustup --version && \
+    cargo --version
+
+RUN cargo clean && cargo build --release
+
+
 FROM redis:latest
 
 # RUN apk update; apk add libgcc_s.so.1
 
-COPY releases/0.9.1/redisql_v0.9.1_x86_64.so /usr/local/lib
+COPY  --from=build  /app/target/release/libredis_sql.so /usr/local/lib/libredis_sql.so
 
 EXPOSE 6379
 
